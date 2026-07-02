@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://ogmamcujbuhw"]
+
+[sub_resource type="Curve" id="Curve_b7w7n"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.111111045), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="sparks" type="Node2D" unique_id=1958522234]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=394844282]
+z_index = 5
+position = Vector2(-5, 0)
+emitting = false
+amount = 30
+lifetime = 0.3
+one_shot = true
+explosiveness = 1.0
+local_coords = true
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_curve = SubResource("Curve_b7w7n")

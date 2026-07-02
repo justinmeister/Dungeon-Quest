@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ddvyro85e8608"]
+
+[ext_resource type="Script" uid="uid://cjx2o1pa1u6t8" path="res://scripts/main.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://celivsr2wu02p" path="res://scenes/levels/level_1.tscn" id="1_o5qli"]
+
+[node name="Main" type="Node" unique_id=1186837998]
+script = ExtResource("1_0wfyh")
+
+[node name="Level1" parent="." unique_id=253017926 instance=ExtResource("1_o5qli")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=967550617]
