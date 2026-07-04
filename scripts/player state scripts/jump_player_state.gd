@@ -6,7 +6,7 @@ class_name Jump_state
 
 func enter_state():
 	name = c.JUMP
-	player.animated_sprite.play(name)
+	player.animation_player.play(c.JUMP)
 	player.velocity.y = c.JUMP_VELOCITY
 	player.audio_player.stream = player.swish
 	player.audio_player.play()

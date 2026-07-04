@@ -5,14 +5,11 @@ func enter_state() -> void:
 	player.audio_player.stream = player.sword_slash_stream
 	#player.audio_player.volume_db = -2.0
 	player.audio_player.play()
-	if player.facing_right:
-		player.animation_player.play("right_ground_attack")
-	else:
-		player.animation_player.play("left_ground_attack")
+	player.play_animation(c.RIGHT_GROUND_ATTACK, c.LEFT_GROUND_ATTACK)
 	
 
 
 func update(_delta: float) -> void:
 	player.velocity.x = move_toward(player.velocity.x, 0.0, c.RUN_ACCEL)
-	if !player.animated_sprite.is_playing():
+	if !player.animation_player.is_playing():
 		change_to_run_or_idle()

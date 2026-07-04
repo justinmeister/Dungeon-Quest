@@ -6,19 +6,6 @@ var player: CharacterBody2D
 var state_dict: Dictionary
 var name: String
 
-#const JUMP = Constants.JUMP
-#const RUN = Constants.RUN
-#const GROUND_ATTACK = Constants.GROUND_ATTACK
-#const JUMP_ATTACK = Constants.JUMP_ATTACK
-#const IDLE = Constants.IDLE
-#const FALL = Constants.FALL
-#const MAKE_BIG = Constants.MAKE_BIG
-#const SWORD_COLLISION = Constants.SWORD_COLLISION
-
-#const MAX_SPEED = Constants.MAX_SPEED
-#const JUMP_VELOCITY = Constants.JUMP_VELOCITY
-#const RUN_ACCEL = Constants.RUN_ACCEL
-
 @abstract func update(delta: float)
 @abstract func enter_state()
 

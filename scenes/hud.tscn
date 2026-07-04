@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b4qmb84tlvpuw"]
+
+[ext_resource type="Texture2D" uid="uid://bugaxbay3flrf" path="res://assets/ui.png" id="1_ahhtf"]
+[ext_resource type="Texture2D" uid="uid://c1ewyl0lrs2k2" path="res://assets/heart.png" id="2_oo0fn"]
+
+[node name="HUD" type="Control" unique_id=1413534596]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="NinePatchRect" parent="." unique_id=1158998546]
+modulate = Color(1, 1, 1, 0.95686275)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 46.0
+offset_bottom = 15.0
+texture = ExtResource("1_ahhtf")
+region_rect = Rect2(6, 129, 116, 46)
+metadata/_edit_group_ = true
+
+[node name="heart3" type="NinePatchRect" parent="TextureRect" unique_id=2104145218]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 2.0
+offset_right = 37.0
+offset_bottom = 9.0
+texture = ExtResource("2_oo0fn")
+region_rect = Rect2(167, 8, 74, 72)
+
+[node name="heart1" type="NinePatchRect" parent="TextureRect" unique_id=1560863358]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 2.0
+offset_right = 15.0
+offset_bottom = 9.0
+texture = ExtResource("2_oo0fn")
+region_rect = Rect2(167, 8, 74, 72)
+
+[node name="heart2" type="NinePatchRect" parent="TextureRect" unique_id=13460765]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 2.0
+offset_right = 26.0
+offset_bottom = 9.0
+texture = ExtResource("2_oo0fn")
+region_rect = Rect2(167, 8, 74, 72)

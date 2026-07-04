@@ -3,11 +3,13 @@
 [ext_resource type="Script" uid="uid://cob8aboagbw6" path="res://scripts/level_1.gd" id="1_5xbjy"]
 [ext_resource type="Texture2D" uid="uid://bjldd4ogaqanc" path="res://assets/Dungeon Tile Set.png" id="1_014kd"]
 [ext_resource type="Texture2D" uid="uid://b41n6v68rhxwb" path="res://assets/physics_pink.png" id="2_bswci"]
+[ext_resource type="Script" uid="uid://ft7q8hyg1e71" path="res://scripts/game_manager.gd" id="2_qxy0u"]
 [ext_resource type="Texture2D" uid="uid://bb0rvhnml614" path="res://assets/left_slope.png" id="3_4nkto"]
 [ext_resource type="PackedScene" uid="uid://cxfq8whhehy17" path="res://scenes/player.tscn" id="3_rus8k"]
 [ext_resource type="Texture2D" uid="uid://dbn56i0pj7nt0" path="res://assets/right_slope.png" id="4_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://c11y2dv7xwt1s" path="res://scenes/skeleton.tscn" id="7_oc4kc"]
 [ext_resource type="AudioStream" uid="uid://be4sy204it5d7" path="res://assets/dungeonmusic.mp3" id="8_s8va5"]
+[ext_resource type="PackedScene" uid="uid://b4qmb84tlvpuw" path="res://scenes/hud.tscn" id="9_dga24"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("2_bswci")
@@ -315,6 +317,14 @@ radius = 8.0
 [node name="Level1" type="Node" unique_id=253017926]
 script = ExtResource("1_5xbjy")
 
+[node name="UI_manager" type="Node" parent="." unique_id=901540132]
+script = ExtResource("2_qxy0u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="UI_manager" unique_id=216007265]
+
+[node name="HUD" parent="UI_manager/CanvasLayer" unique_id=1413534596 instance=ExtResource("9_dga24")]
+z_index = 2
+
 [node name="TileMapLayers" type="Node" parent="." unique_id=141699314]
 
 [node name="PhysicsLayer" type="TileMapLayer" parent="TileMapLayers" unique_id=1072220739]
@@ -345,30 +355,38 @@ shape = SubResource("CapsuleShape2D_5xbjy")
 [node name="Player" parent="." unique_id=77253371 instance=ExtResource("3_rus8k")]
 position = Vector2(80, 120)
 
-[node name="skeleton1" parent="." unique_id=418009140 instance=ExtResource("7_oc4kc")]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=877413410]
+stream = ExtResource("8_s8va5")
+volume_db = -19.925
+
+[node name="Enemies" type="Node" parent="." unique_id=199991359]
+
+[node name="skeleton1" parent="Enemies" unique_id=418009140 instance=ExtResource("7_oc4kc")]
 position = Vector2(243, 149)
+rotation = -3.1415925
+scale = Vector2(1, -1)
 collision_layer = 4
 collision_mask = 3
 
-[node name="skeleton3" parent="." unique_id=970648873 instance=ExtResource("7_oc4kc")]
+[node name="skeleton3" parent="Enemies" unique_id=970648873 instance=ExtResource("7_oc4kc")]
 position = Vector2(345, 149)
+rotation = -3.1415925
+scale = Vector2(1, -1)
 collision_layer = 4
 collision_mask = 3
 
-[node name="skeleton4" parent="." unique_id=1967709050 instance=ExtResource("7_oc4kc")]
+[node name="skeleton4" parent="Enemies" unique_id=1967709050 instance=ExtResource("7_oc4kc")]
 position = Vector2(529, 149)
+rotation = -3.1415925
+scale = Vector2(1, -1)
 collision_layer = 4
 collision_mask = 3
 
-[node name="skeleton2" parent="." unique_id=1826670100 instance=ExtResource("7_oc4kc")]
+[node name="skeleton2" parent="Enemies" unique_id=1826670100 instance=ExtResource("7_oc4kc")]
 position = Vector2(804, 149)
 rotation = 3.1415925
 scale = Vector2(1, -1)
 collision_layer = 4
 collision_mask = 3
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=877413410]
-stream = ExtResource("8_s8va5")
-volume_db = -19.925
 
 [connection signal="body_entered" from="change_level" to="." method="_on_change_level_body_entered"]

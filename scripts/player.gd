@@ -36,14 +36,14 @@ func _ready() -> void:
 
 func make_state_dict() -> Dictionary:
 	
-	var new_state_dict = {c.IDLE: load("res://scripts/player state scripts/idle_player_state.gd"),
-			  	  c.JUMP: load("res://scripts/player state scripts/jump_player_state.gd"),
-				  c.RUN: load("res://scripts/player state scripts/run_player_state.gd"),
-				  c.FALL: load("res://scripts/player state scripts/fall_player_state.gd"),
-				  c.GROUND_ATTACK: load("res://scripts/player state scripts/ground_attack_player_state.gd"),
-				  c.JUMP_ATTACK: load("res://scripts/player state scripts/jump_attack_player_state.gd"),
-				  c.MAKE_BIG: load("res://scripts/player state scripts/make_big_player_state.gd"),
-				  c.HIT: load("res://scripts/player state scripts/hit_player_state.gd")}
+	var new_state_dict = {c.IDLE: preload("res://scripts/player state scripts/idle_player_state.gd"),
+			  	  c.JUMP: preload("res://scripts/player state scripts/jump_player_state.gd"),
+				  c.RUN: preload("res://scripts/player state scripts/run_player_state.gd"),
+				  c.FALL: preload("res://scripts/player state scripts/fall_player_state.gd"),
+				  c.GROUND_ATTACK: preload("res://scripts/player state scripts/ground_attack_player_state.gd"),
+				  c.JUMP_ATTACK: preload("res://scripts/player state scripts/jump_attack_player_state.gd"),
+				  c.MAKE_BIG: preload("res://scripts/player state scripts/make_big_player_state.gd"),
+				  c.HIT: preload("res://scripts/player state scripts/hit_player_state.gd")}
 	
 	return new_state_dict
 	
@@ -61,5 +61,12 @@ func _physics_process(delta: float) -> void:
 func change_state(new_state: String):
 	state = state_dict[new_state].new(self)
 
-func ground_attack_animation() -> void:
-	animated_sprite.play(c.GROUND_ATTACK)
+func play_animation(normal_animation: String, flipped_animation: String = "none"):
+	if flipped_animation != "none":
+		if facing_right:
+			animation_player.play(normal_animation)
+		else:
+			animation_player.play(flipped_animation)
+	else:
+		animation_player.play(normal_animation)
+	

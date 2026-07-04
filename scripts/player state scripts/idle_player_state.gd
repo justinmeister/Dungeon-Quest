@@ -1,20 +1,15 @@
 extends Player_state
 
 
-
 func enter_state() -> void:
 	name = c.IDLE
-	player.animated_sprite.play(name)
-
-
-
+	player.play_animation(c.IDLE)
 
 func update(_delta: float):
 	player.velocity.x = move_toward(player.velocity.x, 0.0, c.RUN_ACCEL)
 	check_direction()
 	
 	if hit_by_skeleton_sword():
-		print("hit by sword")
 		player.change_state(c.HIT)
 	
 	if Input.is_action_just_pressed("up"):
