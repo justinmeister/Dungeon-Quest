@@ -289,7 +289,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"attack1",
-"speed": 10.0
+"speed": 15.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -500,7 +500,7 @@ radius = 7.0
 height = 24.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fjrip"]
-size = Vector2(1.2194278, 16.006317)
+size = Vector2(15.604986, 26.000015)
 
 [sub_resource type="Animation" id="Animation_jq62g"]
 length = 0.001
@@ -539,6 +539,66 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CollisionShape2D:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("player_sword_hitbox/sword_collision_shape:disabled")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("player_sword_hitbox/sword_collision_shape:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.000001, 3.9999995)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("player_sword_hitbox/sword_collision_shape:shape:size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15.604986, 26.000015)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("player_sword_hitbox/sword_collision_shape:rotation")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [3.1415927]
 }
 
 [sub_resource type="Animation" id="Animation_c14ge"]
@@ -662,8 +722,8 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_m0bhd"]
 resource_name = "left_ground_attack"
-length = 0.80001
-step = 0.1
+length = 0.53334004
+step = 0.06666667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -683,16 +743,52 @@ tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("player_sword_hitbox/sword_collision_shape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.46666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("player_sword_hitbox/sword_collision_shape:shape:size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15.604986, 26.000015)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("player_sword_hitbox/sword_collision_shape:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-23.999996, 6)]
 }
 
 [sub_resource type="Animation" id="Animation_iq265"]
 resource_name = "right_ground_attack"
-length = 0.80001
-step = 0.1
+length = 0.53334004
+step = 0.06666667
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -712,10 +808,46 @@ tracks/1/path = NodePath("AnimatedSprite2D:frame")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"times": PackedFloat32Array(0, 0.06666667, 0.13333334, 0.2, 0.26666668, 0.33333334, 0.4, 0.46666667),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("player_sword_hitbox/sword_collision_shape:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("player_sword_hitbox/sword_collision_shape:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(18.19751, 3.0000005)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("player_sword_hitbox/sword_collision_shape:shape:size")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15.604986, 26.000015)]
 }
 
 [sub_resource type="Animation" id="Animation_hqs1p"]
@@ -805,30 +937,32 @@ script = ExtResource("1_bwxyh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2137190222]
 sprite_frames = SubResource("SpriteFrames_3v2ag")
 animation = &"idle1"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1456781306]
+visible = false
 position = Vector2(4, 3)
 shape = SubResource("CapsuleShape2D_jej6c")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1004354285]
-zoom = Vector2(2.5, 2.5)
+zoom = Vector2(3, 3)
 limit_left = 0
 limit_top = 0
 limit_right = 960
 limit_bottom = 192
 
 [node name="player_sword_hitbox" type="Area2D" parent="." unique_id=1840424348]
-visible = false
 position = Vector2(3, -3)
 collision_layer = 8
 collision_mask = 128
 monitoring = false
 
 [node name="sword_collision_shape" type="CollisionShape2D" parent="player_sword_hitbox" unique_id=482376257]
-position = Vector2(-2.6097136, 4.0002255)
-rotation = 3.1414528
-scale = Vector2(0.9999994, 0.9999994)
+position = Vector2(1.000001, 3.9999995)
+rotation = 3.1415927
+scale = Vector2(0.99999934, 0.99999934)
 shape = SubResource("RectangleShape2D_fjrip")
+disabled = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1003874192]
 libraries/ = SubResource("AnimationLibrary_fjrip")

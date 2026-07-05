@@ -359,28 +359,28 @@ volume_db = -19.925
 [node name="Enemies" type="Node" parent="." unique_id=199991359]
 
 [node name="skeleton1" parent="Enemies" unique_id=418009140 instance=ExtResource("7_oc4kc")]
-position = Vector2(243, 149)
+position = Vector2(242, 144)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 collision_layer = 4
 collision_mask = 3
 
 [node name="skeleton3" parent="Enemies" unique_id=970648873 instance=ExtResource("7_oc4kc")]
-position = Vector2(345, 149)
+position = Vector2(366, 143)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 collision_layer = 4
 collision_mask = 3
 
 [node name="skeleton4" parent="Enemies" unique_id=1967709050 instance=ExtResource("7_oc4kc")]
-position = Vector2(529, 149)
+position = Vector2(536, 143)
 rotation = -3.1415925
 scale = Vector2(1, -1)
 collision_layer = 4
 collision_mask = 3
 
 [node name="skeleton2" parent="Enemies" unique_id=1826670100 instance=ExtResource("7_oc4kc")]
-position = Vector2(804, 149)
+position = Vector2(807, 152)
 rotation = 3.1415925
 scale = Vector2(1, -1)
 collision_layer = 4

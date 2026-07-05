@@ -1,8 +1,8 @@
 extends Node
 
-@onready var heart1: NinePatchRect = $CanvasLayer/HUD/TextureRect/heart1
-@onready var heart2: NinePatchRect = $CanvasLayer/HUD/TextureRect/heart2
-@onready var heart3: NinePatchRect = $CanvasLayer/HUD/TextureRect/heart3
+@onready var heart1: NinePatchRect = $CanvasLayer/HUD/HBoxContainer2/TextureRect/HBoxContainer/heart1
+@onready var heart2: NinePatchRect = $CanvasLayer/HUD/HBoxContainer2/TextureRect/HBoxContainer/heart2
+@onready var heart3: NinePatchRect = $CanvasLayer/HUD/HBoxContainer2/TextureRect/HBoxContainer/heart3
 
 
 var player_health = 5

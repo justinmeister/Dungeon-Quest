@@ -834,8 +834,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7e1v2"]
-radius = 5.0
-height = 32.0
+radius = 4.0
+height = 26.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w4hcs"]
 radius = 5.0
@@ -1151,17 +1151,15 @@ _data = {
 [node name="skeleton" type="CharacterBody2D" unique_id=418009140]
 scale = Vector2(-1, 1)
 script = ExtResource("1_w4hcs")
-metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1979598173]
 z_index = 3
 position = Vector2(0, 2.383)
-scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_xrus2")
 animation = &"double_attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1007325399]
-position = Vector2(-3, 11)
+position = Vector2(-2, 7)
 shape = SubResource("CapsuleShape2D_7e1v2")
 
 [node name="attack_timer" type="Timer" parent="." unique_id=195659503]

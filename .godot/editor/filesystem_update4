@@ -1,6 +1,5 @@
-res://scenes/player.tscn
 res://scenes/warrior.tscn
-res://scripts/game_manager.gd
-res://scenes/levels/level_1.tscn
 res://scenes/skeleton.tscn
-res://scripts/player state scripts/hit_player_state.gd
+res://scenes/levels/level_1.tscn
+res://scenes/hud.tscn
+res://scripts/game_manager.gd
