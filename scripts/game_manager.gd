@@ -1,6 +1,5 @@
 extends Node
 
-@onready var player_health_label: Label = $CanvasLayer/HUD/Label
 @onready var heart1: NinePatchRect = $CanvasLayer/HUD/TextureRect/heart1
 @onready var heart2: NinePatchRect = $CanvasLayer/HUD/TextureRect/heart2
 @onready var heart3: NinePatchRect = $CanvasLayer/HUD/TextureRect/heart3

@@ -5,11 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://b41n6v68rhxwb" path="res://assets/physics_pink.png" id="2_bswci"]
 [ext_resource type="Script" uid="uid://ft7q8hyg1e71" path="res://scripts/game_manager.gd" id="2_qxy0u"]
 [ext_resource type="Texture2D" uid="uid://bb0rvhnml614" path="res://assets/left_slope.png" id="3_4nkto"]
-[ext_resource type="PackedScene" uid="uid://cxfq8whhehy17" path="res://scenes/player.tscn" id="3_rus8k"]
 [ext_resource type="Texture2D" uid="uid://dbn56i0pj7nt0" path="res://assets/right_slope.png" id="4_fcfvj"]
 [ext_resource type="PackedScene" uid="uid://c11y2dv7xwt1s" path="res://scenes/skeleton.tscn" id="7_oc4kc"]
 [ext_resource type="AudioStream" uid="uid://be4sy204it5d7" path="res://assets/dungeonmusic.mp3" id="8_s8va5"]
 [ext_resource type="PackedScene" uid="uid://b4qmb84tlvpuw" path="res://scenes/hud.tscn" id="9_dga24"]
+[ext_resource type="PackedScene" uid="uid://drvnfexq08xtp" path="res://scenes/warrior.tscn" id="10_qxy0u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rus8k"]
 texture = ExtResource("2_bswci")
@@ -352,9 +352,6 @@ z_index = 5
 position = Vector2(1016, 151)
 shape = SubResource("CapsuleShape2D_5xbjy")
 
-[node name="Player" parent="." unique_id=77253371 instance=ExtResource("3_rus8k")]
-position = Vector2(80, 120)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=877413410]
 stream = ExtResource("8_s8va5")
 volume_db = -19.925
@@ -388,5 +385,8 @@ rotation = 3.1415925
 scale = Vector2(1, -1)
 collision_layer = 4
 collision_mask = 3
+
+[node name="Warrior" parent="." unique_id=77253371 instance=ExtResource("10_qxy0u")]
+position = Vector2(81, 160)
 
 [connection signal="body_entered" from="change_level" to="." method="_on_change_level_body_entered"]

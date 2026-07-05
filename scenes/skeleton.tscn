@@ -1151,6 +1151,7 @@ _data = {
 [node name="skeleton" type="CharacterBody2D" unique_id=418009140]
 scale = Vector2(-1, 1)
 script = ExtResource("1_w4hcs")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1979598173]
 z_index = 3

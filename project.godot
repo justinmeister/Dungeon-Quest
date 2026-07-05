@@ -22,10 +22,11 @@ GameState="*uid://cswb4j6yyqsln"
 
 [display]
 
-window/size/viewport_width=2304
-window/size/viewport_height=1152
-window/stretch/mode="canvas_items"
-window/stretch/scale=6.0
+window/size/viewport_width=1920
+window/size/viewport_height=1280
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+window/stretch/scale=3.0
 window/stretch/scale_mode="integer"
 
 [input]
@@ -75,3 +76,4 @@ big={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+2d/snap/snap_2d_transforms_to_pixel=true
