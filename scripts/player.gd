@@ -17,7 +17,7 @@ var facing_right = true
 @onready var sword_hitbox_shape: CollisionShape2D = $player_sword_hitbox/sword_collision_shape
 @onready var coyote_timer: Timer = $coyote_timer
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
-@onready var hitbox: Area2D = $hitbox
+@onready var hitbox: Area2D = $hitbox_player
 
 var sword_slash_stream: AudioStream = preload("res://assets/SFX/sword_slash.mp3")
 var left_step_stream: AudioStream = preload("res://assets/SFX/left_footstep.mp3")
@@ -57,6 +57,7 @@ func make_state_dict() -> Dictionary:
 func _physics_process(delta: float) -> void:
 	state.update(delta)
 	move_and_slide()
+	print(GameState.player_health)
 
 func change_state(new_state: String):
 	state = state_dict[new_state].new(self)

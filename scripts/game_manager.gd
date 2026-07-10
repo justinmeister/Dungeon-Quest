@@ -1,15 +1,15 @@
 extends Node
 
-@onready var heart1: NinePatchRect = $CanvasLayer/HUD/HBoxContainer2/TextureRect/HBoxContainer/heart1
-@onready var heart2: NinePatchRect = $CanvasLayer/HUD/HBoxContainer2/TextureRect/HBoxContainer/heart2
-@onready var heart3: NinePatchRect = $CanvasLayer/HUD/HBoxContainer2/TextureRect/HBoxContainer/heart3
+@onready var heart1: TextureRect = $HBoxContainer2/HSplitContainer/MarginContainer/NinePatchRect/MarginContainer/HSplitContainer/heart1
+@onready var heart2: TextureRect = $HBoxContainer2/HSplitContainer/MarginContainer/NinePatchRect/MarginContainer/HSplitContainer/heart2
+@onready var heart3: TextureRect = $HBoxContainer2/HSplitContainer/MarginContainer/NinePatchRect/MarginContainer/HSplitContainer/heart3
 
 
 var player_health = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	print(heart1) # Replace with function body.
 	
 func _process(_delta: float) -> void:
 	update_player_health()

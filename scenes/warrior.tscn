@@ -937,7 +937,6 @@ script = ExtResource("1_bwxyh")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2137190222]
 sprite_frames = SubResource("SpriteFrames_3v2ag")
 animation = &"idle1"
-flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1456781306]
 visible = false
@@ -952,6 +951,7 @@ limit_right = 960
 limit_bottom = 192
 
 [node name="player_sword_hitbox" type="Area2D" parent="." unique_id=1840424348]
+visible = false
 position = Vector2(3, -3)
 collision_layer = 8
 collision_mask = 128
@@ -974,10 +974,12 @@ one_shot = true
 stream = ExtResource("7_mmtbg")
 volume_db = -19.86
 
-[node name="hitbox" type="Area2D" parent="." unique_id=1493713774]
-visible = false
+[node name="hitbox_player" type="Area2D" parent="." unique_id=1493713774]
+z_index = 5
+collision_layer = 2
+collision_mask = 8
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1834390646]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_player" unique_id=1834390646]
 position = Vector2(3, 3)
 shape = SubResource("CapsuleShape2D_fjrip")
 
