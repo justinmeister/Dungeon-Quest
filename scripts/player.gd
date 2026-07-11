@@ -55,9 +55,10 @@ func make_state_dict() -> Dictionary:
 ### just a default collision function for CharacterBody2D nodes.
 
 func _physics_process(delta: float) -> void:
+	check_direction()
 	state.update(delta)
 	move_and_slide()
-	print(GameState.player_health)
+	print(animated_sprite.flip_h)
 
 func change_state(new_state: String):
 	state = state_dict[new_state].new(self)
@@ -70,4 +71,12 @@ func play_animation(normal_animation: String, flipped_animation: String = "none"
 			animation_player.play(flipped_animation)
 	else:
 		animation_player.play(normal_animation)
+
+func check_direction():
+	direction = Input.get_axis("ui_left", "ui_right")
+		
+	if direction > 0:
+		facing_right = true
+	elif direction < 0:
+		facing_right = false
 	

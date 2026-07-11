@@ -4,10 +4,9 @@ var coyote_floating: bool = false
 
 func enter_state():
 	name = c.RUN
-	player.play_animation(c.RUN)
+	player.play_animation(c.RUN_RIGHT, c.RUN_LEFT)
 
 func update(_delta: float) -> void:
-	check_direction()
 	player.velocity.x = move_toward(player.velocity.x, c.MAX_SPEED * player.direction, c.RUN_ACCEL)
 	
 	if !player.is_on_floor():

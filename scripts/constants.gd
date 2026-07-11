@@ -7,7 +7,11 @@ extends Node
 
 
 const IDLE = "idle"
+const IDLE_RIGHT = "idle_right"
+const IDLE_LEFT = "idle_left"
 const RUN = "run"
+const RUN_RIGHT = "run_right"
+const RUN_LEFT = "run_left"
 const JUMP = "jump"
 const FALL = "fall"
 const GROUND_ATTACK = "ground_attack"

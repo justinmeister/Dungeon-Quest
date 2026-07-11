@@ -13,7 +13,6 @@ func enter_state():
 
 
 func update(delta: float):
-	check_direction()
 	player.velocity.x = player.direction * c.MAX_SPEED
 	
 	if player.is_on_floor():

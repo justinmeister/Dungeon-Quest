@@ -13,16 +13,6 @@ func _init(new_player = null):
 	player = new_player
 	enter_state()
 
-func check_direction():
-	player.direction = Input.get_axis("ui_left", "ui_right")
-		
-	if player.direction > 0:
-		player.facing_right = true
-		player.animated_sprite.flip_h = false
-	elif player.direction < 0:
-		player.facing_right = false
-		player.animated_sprite.flip_h = true
-
 func change_to_run_or_idle():
 	if player.direction:
 		player.change_state(c.RUN)

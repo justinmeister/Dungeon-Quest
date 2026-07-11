@@ -3,11 +3,10 @@ extends Player_state
 
 func enter_state() -> void:
 	name = c.IDLE
-	player.play_animation(c.IDLE)
+	player.play_animation(c.IDLE_RIGHT, c.IDLE_LEFT)
 
 func update(_delta: float):
 	player.velocity.x = move_toward(player.velocity.x, 0.0, c.RUN_ACCEL)
-	check_direction()
 	
 	if hit_by_skeleton_sword():
 		player.change_state(c.HIT)

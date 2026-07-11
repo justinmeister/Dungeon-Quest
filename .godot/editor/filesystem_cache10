@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1783719821
+::res://::1783783645
 icon.svg::CompressedTexture2D::5081321571408315834::1781359624::1783128095::1::::<><><>0<>0<>6fa1025271333e10ead3299b17ae2ed7<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 node.gd::GDScript::7837828350319875168::1781926448::0::1::::<>Node<><>0<>0<><>::
 README.md::TextFile::-1::1783030704::0::1::::<><><>0<>0<><>::
@@ -67,41 +67,41 @@ right_footstep.mp3::AudioStreamMP3::1637625696643732992::1782682636::1783128095:
 skeleton_fatal_hit.mp3::AudioStreamMP3::7550650180221715259::1782660228::1783128095::1::::<><><>0<>0<>6f1ed0e247178fb04df07ea787289e0a<>res://.godot/imported/skeleton_fatal_hit.mp3-d09dd34c9075f83539dfd641db8cec14.mp3str::
 swish.mp3::AudioStreamMP3::3797735276298961446::1782688752::1783128095::1::::<><><>0<>0<>3f20cba8417d2f7bb9c5c29414aefa6a<>res://.godot/imported/swish.mp3-8de813436d094ab4f5cec1a8184ad706.mp3str::
 sword_slash.mp3::AudioStreamMP3::6168674123469249205::1782669000::1783128095::1::::<><><>0<>0<>d817010194081d979551b2f84a5c0882<>res://.godot/imported/sword_slash.mp3-98d08242ffe3784da769566cc05cc166.mp3str::
-::res://scenes/::1783287794
+::res://scenes/::1783740006
 constants.tscn::PackedScene::6858197257222539191::1782579067::0::1::::<><><>0<>0<><>::uid://6hnna0jgl711::::res://scripts/constants.gd
-hud.tscn::PackedScene::4455659361916798066::1783262268::0::1::::<><><>0<>0<><>::uid://bugaxbay3flrf::::res://assets/ui.png<>uid://c1ewyl0lrs2k2::::res://assets/heart.png
+hud.tscn::PackedScene::4455659361916798066::1783723666::0::1::::<><><>0<>0<><>::uid://ft7q8hyg1e71::::res://scripts/game_manager.gd<>uid://bugaxbay3flrf::::res://assets/ui.png<>uid://c1ewyl0lrs2k2::::res://assets/heart.png
 little_skeleton.tscn::PackedScene::6465319848100571126::1783287794::0::1::::<><><>0<>0<><>::uid://2xpqesx4nsy5::::res://scripts/little_skeleton.gd<>uid://bi1qt3onyhsb3::::res://assets/little skeleton Dead.png<>uid://bainmy0idd2o4::::res://assets/little skeleton Idle.png
 main.tscn::PackedScene::7414668868826623543::1782668070::0::1::::<><><>0<>0<><>::uid://cjx2o1pa1u6t8::::res://scripts/main.gd<>uid://celivsr2wu02p::::res://scenes/levels/level_1.tscn
 player.tscn::PackedScene::6398538229565401996::1783215899::0::1::::<><><>0<>0<><>::uid://uv8h541phgh6::::res://assets/knight_idle.png<>uid://dspd62mtys6e4::::res://scripts/player.gd<>uid://ciqu421lwi7s4::::res://assets/knight_attack.png<>uid://dkef3r5ot76be::::res://assets/knight_run.png<>uid://cjyf0q71vn0fv::::res://assets/knight_attack_final_frame.png<>uid://3eppgpwdxaw4::::res://assets/knight_hit.png<>uid://ct5ffq06ckepx::::res://assets/SFX/sword_slash.mp3
-skeleton.tscn::PackedScene::6652930739338925618::1783284362::0::1::::<><><>0<>0<><>::uid://dklck56inaasa::::res://assets/skeleton_idle.png<>uid://pifba05bcwet::::res://assets/skeleton_attack1.png<>uid://vvnr4e2dtwjx::::res://scripts/skeleton.gd<>uid://bceb6ib4q138p::::res://assets/skeleton_attack2.png<>uid://cgqox1h8xejl7::::res://assets/skeleton_die.png<>uid://bkt172ignubfh::::res://assets/skeleton_hurt.png<>uid://duxdd3w3x3f22::::res://assets/skeleton_walk.png<>uid://ogmamcujbuhw::::res://scenes/sparks.tscn<>uid://dftudty5er5yl::::res://assets/SFX/skeleton_fatal_hit.mp3
+skeleton.tscn::PackedScene::6652930739338925618::1783724442::0::1::::<><><>0<>0<><>::uid://dklck56inaasa::::res://assets/skeleton_idle.png<>uid://pifba05bcwet::::res://assets/skeleton_attack1.png<>uid://vvnr4e2dtwjx::::res://scripts/skeleton.gd<>uid://bceb6ib4q138p::::res://assets/skeleton_attack2.png<>uid://cgqox1h8xejl7::::res://assets/skeleton_die.png<>uid://bkt172ignubfh::::res://assets/skeleton_hurt.png<>uid://duxdd3w3x3f22::::res://assets/skeleton_walk.png<>uid://ogmamcujbuhw::::res://scenes/sparks.tscn<>uid://dftudty5er5yl::::res://assets/SFX/skeleton_fatal_hit.mp3
 sparks.tscn::PackedScene::995759315660618348::1783030482::0::1::::<><><>0<>0<><>::
-warrior.tscn::PackedScene::8396622822022199113::1783287584::0::1::::<><><>0<>0<><>::uid://dspd62mtys6e4::::res://scripts/player.gd<>uid://c733xehmmic3q::::res://assets/warrior_sheet.png<>uid://ct5ffq06ckepx::::res://assets/SFX/sword_slash.mp3
-::res://scenes/levels/::1783284597
-level_1.tscn::PackedScene::5076829107786073129::1783284597::0::1::::<><><>0<>0<><>::uid://cob8aboagbw6::::res://scripts/level_1.gd<>uid://bjldd4ogaqanc::::res://assets/Dungeon Tile Set.png<>uid://b41n6v68rhxwb::::res://assets/physics_pink.png<>uid://ft7q8hyg1e71::::res://scripts/game_manager.gd<>uid://bb0rvhnml614::::res://assets/left_slope.png<>uid://dbn56i0pj7nt0::::res://assets/right_slope.png<>uid://c11y2dv7xwt1s::::res://scenes/skeleton.tscn<>uid://be4sy204it5d7::::res://assets/dungeonmusic.mp3<>uid://b4qmb84tlvpuw::::res://scenes/hud.tscn<>uid://cyd34xskpt1re::::res://scenes/little_skeleton.tscn<>uid://drvnfexq08xtp::::res://scenes/warrior.tscn
+warrior.tscn::PackedScene::8396622822022199113::1783740006::0::1::::<><><>0<>0<><>::uid://dspd62mtys6e4::::res://scripts/player.gd<>uid://c733xehmmic3q::::res://assets/warrior_sheet.png<>uid://ct5ffq06ckepx::::res://assets/SFX/sword_slash.mp3
+::res://scenes/levels/::1783723896
+level_1.tscn::PackedScene::5076829107786073129::1783723896::0::1::::<><><>0<>0<><>::uid://cob8aboagbw6::::res://scripts/level_1.gd<>uid://bjldd4ogaqanc::::res://assets/Dungeon Tile Set.png<>uid://b41n6v68rhxwb::::res://assets/physics_pink.png<>uid://bb0rvhnml614::::res://assets/left_slope.png<>uid://dbn56i0pj7nt0::::res://assets/right_slope.png<>uid://c11y2dv7xwt1s::::res://scenes/skeleton.tscn<>uid://be4sy204it5d7::::res://assets/dungeonmusic.mp3<>uid://b4qmb84tlvpuw::::res://scenes/hud.tscn<>uid://cyd34xskpt1re::::res://scenes/little_skeleton.tscn<>uid://drvnfexq08xtp::::res://scenes/warrior.tscn
 level_2.tscn::PackedScene::2298608087600879638::1781458395::0::1::::<><><>0<>0<><>::uid://cob8aboagbw6::::res://scripts/level_1.gd<>uid://b41n6v68rhxwb::::res://assets/physics_pink.png<>uid://bjldd4ogaqanc::::res://assets/Dungeon Tile Set.png<>uid://cxfq8whhehy17::::res://scenes/player.tscn
-::res://scripts/::1783287355
-constants.gd::GDScript::2191117372321667494::1782938774::0::1::::<>Node<><>0<>0<><>::
-game_manager.gd::GDScript::392140657171984346::1783262321::0::1::::<>Node<><>0<>0<><>::
+::res://scripts/::1783739829
+constants.gd::GDScript::2191117372321667494::1783739829::0::1::::<>Node<><>0<>0<><>::
+game_manager.gd::GDScript::392140657171984346::1783723666::0::1::::<>Node<><>0<>0<><>::
 game_state.gd::GDScript::6081769890198369035::1783202569::0::1::::<>Node<><>0<>0<><>::
 level_1.gd::GDScript::169398626205667775::1782862088::0::1::::<>Node<><>0<>0<><>::
 little_skeleton.gd::GDScript::1943519033148405678::1783286997::0::1::::<>CharacterBody2D<><>0<>0<><>::
 main.gd::GDScript::5453687397205968803::1782581339::0::1::::<>Node<><>0<>0<><>::
-player.gd::GDScript::8453865851028329361::1783287355::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.gd::GDScript::8453865851028329361::1783738240::0::1::::<>CharacterBody2D<><>0<>0<><>::
 skeleton.gd::GDScript::1518138859224192457::1783030033::0::1::::<>CharacterBody2D<><>0<>0<><>::
-::res://scripts/little_skeleton_state_scripts/::1783287629
-base_state_class_little_skeleton.gd::GDScript::2390782808361802193::1783287629::0::1::::Little_Skeleton_State<>Object<><>1<>0<><>::
+::res://scripts/little_skeleton_state_scripts/::1783723853
+base_state_class_little_skeleton.gd::GDScript::2390782808361802193::1783723853::0::1::::Little_Skeleton_State<>Object<><>1<>0<><>::
 die_little_skeleton_state.gd::GDScript::1754195360755675847::1783286956::0::1::::<>Little_Skeleton_State<><>0<>0<><>::
 idle_little_skeleton_state.gd::GDScript::6881646664446471730::1783287133::0::1::::<>Little_Skeleton_State<><>0<>0<><>::
-::res://scripts/player state scripts/::1783224411
-base_state_class_player.gd::GDScript::1960271879558229829::1783141571::0::1::::Player_state<>Object<><>1<>0<><>::
-fall_player_state.gd::GDScript::3623515410547746852::1782579532::0::1::::<>Player_state<><>0<>0<><>::
+::res://scripts/player state scripts/::1783739855
+base_state_class_player.gd::GDScript::1960271879558229829::1783733528::0::1::::Player_state<>Object<><>1<>0<><>::
+fall_player_state.gd::GDScript::3623515410547746852::1783733567::0::1::::<>Player_state<><>0<>0<><>::
 ground_attack_player_state.gd::GDScript::1357363420429620080::1783136705::0::1::::<>Player_state<><>0<>0<><>::
 hit_player_state.gd::GDScript::7197837479740548965::1783224411::0::1::::<>Player_state<><>0<>0<><>::
-idle_player_state.gd::GDScript::7615164892666060396::1783137032::0::1::::<>Player_state<><>0<>0<><>::
-jump_attack_player_state.gd::GDScript::3638461939569544970::1783136933::0::1::::<>Player_state<><>0<>0<><>::
-jump_player_state.gd::GDScript::6628984264894186287::1783203668::0::1::::Jump_state<>Player_state<><>0<>0<><>::
+idle_player_state.gd::GDScript::7615164892666060396::1783739855::0::1::::<>Player_state<><>0<>0<><>::
+jump_attack_player_state.gd::GDScript::3638461939569544970::1783736514::0::1::::<>Player_state<><>0<>0<><>::
+jump_player_state.gd::GDScript::6628984264894186287::1783733554::0::1::::Jump_state<>Player_state<><>0<>0<><>::
 make_big_player_state.gd::GDScript::8005976356700370427::1782581339::0::1::::<>Player_state<><>0<>0<><>::
-run_player_state.gd::GDScript::8123483094716901764::1783203784::0::1::::<>Player_state<><>0<>0<><>::
+run_player_state.gd::GDScript::8123483094716901764::1783739024::0::1::::<>Player_state<><>0<>0<><>::
 ::res://scripts/skeleton state scripts/::1783030359
 attack1_skeleton_state.gd::GDScript::982461856813283710::1782581389::0::1::::<>Skeleton_State<><>0<>0<><>::
 attack2_skeleton_state.gd::GDScript::2831271605657595231::1782581389::0::1::::<>Skeleton_State<><>0<>0<><>::
