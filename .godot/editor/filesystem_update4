@@ -1,7 +1,2 @@
 res://scenes/warrior.tscn
-res://scenes/levels/level_1.tscn
-res://scripts/player.gd
-res://scripts/game_manager.gd
-res://scenes/little_skeleton.tscn
-res://scripts/little_skeleton.gd
-res://scripts/little_skeleton_state_scripts/die_little_skeleton_state.gd
+res://scenes/skeleton.tscn

@@ -834,15 +834,15 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7e1v2"]
-radius = 4.0
-height = 26.0
+radius = 7.0
+height = 46.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w4hcs"]
-radius = 5.0
-height = 39.376408
+radius = 7.3191547
+height = 47.68717
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fdi4i"]
-size = Vector2(4.5692596, 21.542095)
+size = Vector2(4.5692596, 21.950838)
 
 [sub_resource type="Animation" id="Animation_j77iq"]
 length = 0.001
@@ -1048,7 +1048,7 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.90000004, 1, 1.1, 1.2, 1.3000001, 1.4, 1.5, 1.6, 1.7, 1.8000001, 1.9, 2, 2.1000001, 2.2, 2.3, 2.4, 2.5, 2.6000001),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(10.000001, -7), Vector2(-5, -1), Vector2(-7, -1), Vector2(-7, -1), Vector2(-8, -2), Vector2(24, -11), Vector2(23.999996, -13), Vector2(21.999996, -10), Vector2(13, -7.0000014), Vector2(10, -6), Vector2(10, -6), Vector2(0, -4), Vector2(0.9999995, -4.7683716e-07), Vector2(1.9999998, -4.7683716e-07), Vector2(25.999998, -6.999999), Vector2(26.999998, -6.999999), Vector2(24.999998, -5.9999995), Vector2(16, -6), Vector2(10, -6), Vector2(10, -6), Vector2(10, -6), Vector2(10, -6), Vector2(10, -5), Vector2(10, -5), Vector2(10, -5), Vector2(10, -5), Vector2(9, -5)]
+"values": [Vector2(13, -7.000001), Vector2(-5, -1), Vector2(-7, -1), Vector2(-7, -1), Vector2(-8, -2), Vector2(30.798573, -11.96544), Vector2(31, -15), Vector2(29, -11), Vector2(18, -9), Vector2(13, -6.999999), Vector2(13, -6.999999), Vector2(0, -4), Vector2(3.0000002, 1.0000006), Vector2(4, 2.0000007), Vector2(35, -6.999999), Vector2(35, -6.999999), Vector2(34, -5.9999995), Vector2(22, -8), Vector2(13, -7), Vector2(13, -7.0000005), Vector2(14, -8), Vector2(13, -7), Vector2(13, -5), Vector2(14, -6), Vector2(13, -6), Vector2(13, -7), Vector2(13, -7)]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
@@ -1093,10 +1093,10 @@ tracks/6/path = NodePath("skeleton_sword_hitbox/sword_shape:disabled")
 tracks/6/interp = 1
 tracks/6/loop_wrap = true
 tracks/6/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.5),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.5, 0.9, 1.1, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [false, true, false]
+"values": [true, true, false, true, false, true]
 }
 
 [sub_resource type="Animation" id="Animation_haw2w"]
@@ -1139,6 +1139,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [Color(1, 0, 0, 1), Color(1.0000322, 1.0039686, 1.0039686, 1)]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("skeleton_sword_hitbox/sword_shape:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dwag7"]
 _data = {
@@ -1159,7 +1171,8 @@ sprite_frames = SubResource("SpriteFrames_xrus2")
 animation = &"double_attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1007325399]
-position = Vector2(-2, 7)
+visible = false
+position = Vector2(-4, 10)
 shape = SubResource("CapsuleShape2D_7e1v2")
 
 [node name="attack_timer" type="Timer" parent="." unique_id=195659503]
@@ -1173,7 +1186,6 @@ collision_layer = 4
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1828579313]
-visible = false
 z_index = 5
 position = Vector2(-3, 10.000001)
 rotation = 0.010124713
@@ -1193,6 +1205,7 @@ collision_mask = 2
 [node name="sword_shape" type="CollisionShape2D" parent="skeleton_sword_hitbox" unique_id=254470042]
 position = Vector2(10.000001, -7)
 rotation = 0.4526108
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_fdi4i")
 disabled = true
 
