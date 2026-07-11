@@ -9,6 +9,8 @@ var health = c.SKELETON_START_HEALTH
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var physics_collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var hitbox: Area2D = $hitbox
+@onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
+
 
 func _ready() -> void:
 	state_dict = make_state_dict()

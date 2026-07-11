@@ -58,7 +58,6 @@ func _physics_process(delta: float) -> void:
 	check_direction()
 	state.update(delta)
 	move_and_slide()
-	print(animated_sprite.flip_h)
 
 func change_state(new_state: String):
 	state = state_dict[new_state].new(self)

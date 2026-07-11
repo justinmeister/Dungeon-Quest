@@ -9,7 +9,7 @@ var player_health = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	print(heart1) # Replace with function body.
+	pass
 	
 func _process(_delta: float) -> void:
 	update_player_health()
