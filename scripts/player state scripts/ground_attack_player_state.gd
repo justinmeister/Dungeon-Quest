@@ -12,4 +12,4 @@ func enter_state() -> void:
 func update(_delta: float) -> void:
 	player.velocity.x = move_toward(player.velocity.x, 0.0, c.RUN_ACCEL)
 	if !player.animation_player.is_playing():
-		change_to_run_or_idle()
+		change_from_jump_state()

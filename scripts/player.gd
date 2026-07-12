@@ -22,6 +22,7 @@ var double_jump_buffer: bool = false
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var hitbox: Area2D = $hitbox_player
 @onready var double_jump_timer: Timer = $double_jump_timer
+@onready var jump_buffer_timer: Timer = $jump_buffer_timer
 
 var sword_slash_stream: AudioStream = preload("res://assets/SFX/sword_slash.mp3")
 var left_step_stream: AudioStream = preload("res://assets/SFX/left_footstep.mp3")

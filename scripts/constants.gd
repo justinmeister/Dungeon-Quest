@@ -39,10 +39,12 @@ const DOUBLE_ATTACK_LEFT = "double_attack_left"
 
 const MAX_SPEED: float = 100.0
 const JUMP_VELOCITY: float = -300.0
+const DOUBLE_JUMP_VELOCITY: float = -330.0
 const RUN_ACCEL: float = 20.0
 const SKELETON_DEATH_TIME: float = 1.0
 const SKELETON_START_HEALTH: int = 1
 const DOUBLE_JUMP_WAIT_TIME: float = 0.2
+const JUMP_BUFFER_WAIT_TIME: float = 0.2
 
 const LEVEL_1_PATH = "res://scenes/Levels/level_1.tscn"
 const LEVEL_2_PATH = "res://scenes/levels/level_2.tscn"

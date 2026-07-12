@@ -11,7 +11,7 @@ func update(delta: float) -> void:
 	
 	if player.is_on_floor():
 		player.velocity.y = 0
-		change_to_run_or_idle()
+		change_from_jump_state()
 	else:
 		player.velocity += player.get_gravity() * delta
 	

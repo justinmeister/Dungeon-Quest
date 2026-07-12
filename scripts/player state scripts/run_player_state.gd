@@ -9,7 +9,6 @@ func enter_state():
 
 func update(_delta: float) -> void:
 	player.velocity.x = move_toward(player.velocity.x, c.MAX_SPEED * player.direction, c.RUN_ACCEL)
-	print(player.double_jump_timer.time_left)
 	double_jump_timer_check()
 	
 	if !player.is_on_floor():
@@ -35,17 +34,7 @@ func coyote_time_check() -> void:
 		player.coyote_timer.start(0.1)
 
 
-func change_to_jump_state() -> void:
-	if !player.jump_buffer:
-		player.change_state(c.JUMP)
-	else:
-		if player.double_jump_timer.time_left > 0:
-			player.change_state(c.DOUBLE_JUMP)
-		else:
-			player.change_state(c.JUMP)
-		player.jump_buffer = false
-
 
 func double_jump_timer_check() -> void:
 	if player.double_jump_timer.time_left <= 0:
-		player.jump_buffer = false
+		player.double_jump_buffer = false

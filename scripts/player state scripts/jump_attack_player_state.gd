@@ -12,7 +12,7 @@ func update(delta: float) -> void:
 	if player.is_on_floor():
 		player.velocity.x = 0
 		if !player.animation_player.is_playing():
-			change_to_run_or_idle()
+			change_from_jump_state()
 	else:
 		player.velocity.x = player.direction * c.MAX_SPEED
 		player.velocity += player.get_gravity() * delta

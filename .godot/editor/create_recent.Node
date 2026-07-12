@@ -12,4 +12,3 @@ AnimationPlayer
 AnimatedSprite2D
 CharacterBody2D
 HBoxContainer
-Node
