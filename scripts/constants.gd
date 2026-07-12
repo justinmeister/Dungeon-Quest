@@ -26,6 +26,7 @@ const SWORD_COLLISION = "sword_collision"
 const RIGHT_GROUND_ATTACK = "right_ground_attack"
 const LEFT_GROUND_ATTACK = "left_ground_attack"
 const HIT = "hit"
+const HIT_IN_AIR = "hit_in_air"
 
 const WALK = "walk"
 const ATTACK1 = "attack1"

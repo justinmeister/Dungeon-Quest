@@ -18,7 +18,11 @@ func update(delta: float):
 	buffer_jump_timer_check()
 	player.velocity.x = player.direction * c.MAX_SPEED
 	
-	if player.is_on_floor():
+	if hit_by_skeleton_sword():
+		player.velocity.y = 0
+		player.change_state(c.HIT_IN_AIR)
+	
+	elif player.is_on_floor():
 		player.velocity.y = 0
 		change_from_jump_state()
 	else:

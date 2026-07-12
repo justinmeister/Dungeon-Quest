@@ -9,7 +9,11 @@ func enter_state():
 	player.play_animation(c.RIGHT_GROUND_ATTACK, c.LEFT_GROUND_ATTACK)
 	
 func update(delta: float) -> void:
-	if player.is_on_floor():
+	if hit_by_skeleton_sword():
+		player.velocity.y = 0
+		player.change_state(c.HIT_IN_AIR)
+	
+	elif player.is_on_floor():
 		player.velocity.x = 0
 		if !player.animation_player.is_playing():
 			change_from_jump_state()

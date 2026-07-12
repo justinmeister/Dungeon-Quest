@@ -1,7 +1,7 @@
 extends Player_state
 
-### Constants to change state (IDLE, RUN, etc) are inherited
-### from the Player_state class. 
+
+
 
 func enter_state() -> void:
 	name = c.FALL
@@ -9,7 +9,11 @@ func enter_state() -> void:
 func update(delta: float) -> void:
 	player.velocity.x = player.direction * c.MAX_SPEED
 	
-	if player.is_on_floor():
+	if hit_by_skeleton_sword():
+		player.velocity.y = 0
+		player.change_state(c.HIT_IN_AIR)
+		
+	elif player.is_on_floor():
 		player.velocity.y = 0
 		change_from_jump_state()
 	else:

@@ -49,7 +49,8 @@ func make_state_dict() -> Dictionary:
 				  c.GROUND_ATTACK: preload("res://scripts/player state scripts/ground_attack_player_state.gd"),
 				  c.JUMP_ATTACK: preload("res://scripts/player state scripts/jump_attack_player_state.gd"),
 				  c.MAKE_BIG: preload("res://scripts/player state scripts/make_big_player_state.gd"),
-				  c.HIT: preload("res://scripts/player state scripts/hit_player_state.gd")}
+				  c.HIT: preload("res://scripts/player state scripts/hit_player_state.gd"),
+				  c.HIT_IN_AIR: preload("res://scripts/player state scripts/hit_in_air_player_state.gd")}
 	
 	return new_state_dict
 	

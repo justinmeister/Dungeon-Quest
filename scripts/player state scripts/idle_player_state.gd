@@ -11,7 +11,7 @@ func update(_delta: float):
 	if hit_by_skeleton_sword():
 		player.change_state(c.HIT)
 	
-	if Input.is_action_just_pressed("up"):
+	elif Input.is_action_just_pressed("up"):
 		player.change_state(c.JUMP)
 	
 	elif Input.is_action_just_pressed("big"):
