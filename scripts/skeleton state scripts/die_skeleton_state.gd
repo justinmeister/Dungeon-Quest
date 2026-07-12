@@ -18,5 +18,3 @@ func end_animation_check() -> void:
 	if !skeleton.animation_player.is_playing():
 		skeleton.change_state(c.BONE_PILE)
 	
-func change_to_bone_pile() -> void:
-	skeleton.change_state(c.BONE_PILE)

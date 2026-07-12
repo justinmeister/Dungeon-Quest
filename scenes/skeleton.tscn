@@ -1175,12 +1175,6 @@ visible = false
 position = Vector2(-4, 10)
 shape = SubResource("CapsuleShape2D_7e1v2")
 
-[node name="attack_timer" type="Timer" parent="." unique_id=195659503]
-one_shot = true
-
-[node name="death_timer" type="Timer" parent="." unique_id=1979663357]
-one_shot = true
-
 [node name="hitbox" type="Area2D" parent="." unique_id=100480035]
 collision_layer = 4
 collision_mask = 8

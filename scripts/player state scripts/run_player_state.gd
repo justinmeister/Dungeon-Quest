@@ -5,9 +5,12 @@ var coyote_floating: bool = false
 func enter_state():
 	name = c.RUN
 	player.play_animation(c.RUN_RIGHT, c.RUN_LEFT)
+	player.double_jump_timer.start(c.DOUBLE_JUMP_WAIT_TIME)
 
 func update(_delta: float) -> void:
 	player.velocity.x = move_toward(player.velocity.x, c.MAX_SPEED * player.direction, c.RUN_ACCEL)
+	print(player.double_jump_timer.time_left)
+	double_jump_timer_check()
 	
 	if !player.is_on_floor():
 		coyote_time_check()
@@ -15,9 +18,10 @@ func update(_delta: float) -> void:
 	elif player.direction == 0.0:
 		player.velocity.x = move_toward(player.velocity.x, 0, c.MAX_SPEED)
 		player.change_state(c.IDLE)
-	
+		
 	if Input.is_action_just_pressed("up"):
-		player.change_state(c.JUMP)
+		change_to_jump_state()
+		
 	elif Input.is_action_just_pressed("ui_accept"):
 		player.change_state(c.GROUND_ATTACK)
 
@@ -29,4 +33,19 @@ func coyote_time_check() -> void:
 	else:
 		coyote_floating = true
 		player.coyote_timer.start(0.1)
-	
+
+
+func change_to_jump_state() -> void:
+	if !player.jump_buffer:
+		player.change_state(c.JUMP)
+	else:
+		if player.double_jump_timer.time_left > 0:
+			player.change_state(c.DOUBLE_JUMP)
+		else:
+			player.change_state(c.JUMP)
+		player.jump_buffer = false
+
+
+func double_jump_timer_check() -> void:
+	if player.double_jump_timer.time_left <= 0:
+		player.jump_buffer = false

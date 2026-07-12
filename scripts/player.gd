@@ -9,6 +9,9 @@ var state_dict: Dictionary
 var initial_state = c.IDLE
 var big = false
 var facing_right = true
+var jump_buffer: bool = false
+var double_jump_buffer: bool = false
+
 
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -18,6 +21,7 @@ var facing_right = true
 @onready var coyote_timer: Timer = $coyote_timer
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var hitbox: Area2D = $hitbox_player
+@onready var double_jump_timer: Timer = $double_jump_timer
 
 var sword_slash_stream: AudioStream = preload("res://assets/SFX/sword_slash.mp3")
 var left_step_stream: AudioStream = preload("res://assets/SFX/left_footstep.mp3")
@@ -38,6 +42,7 @@ func make_state_dict() -> Dictionary:
 	
 	var new_state_dict = {c.IDLE: preload("res://scripts/player state scripts/idle_player_state.gd"),
 			  	  c.JUMP: preload("res://scripts/player state scripts/jump_player_state.gd"),
+				  c.DOUBLE_JUMP: preload("res://scripts/player state scripts/double_jump_player_state.gd"),
 				  c.RUN: preload("res://scripts/player state scripts/run_player_state.gd"),
 				  c.FALL: preload("res://scripts/player state scripts/fall_player_state.gd"),
 				  c.GROUND_ATTACK: preload("res://scripts/player state scripts/ground_attack_player_state.gd"),

@@ -10,6 +10,7 @@ func enter_state():
 	player.velocity.y = c.JUMP_VELOCITY
 	player.audio_player.stream = player.swish
 	player.audio_player.play()
+	player.jump_buffer = true
 
 
 func update(delta: float):

@@ -6,14 +6,13 @@ var initial_state = c.DOUBLE_ATTACK
 var health = c.SKELETON_START_HEALTH
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var attack_timer: Timer = $attack_timer
-@onready var death_timer: Timer = $death_timer
 @onready var hitbox: Area2D = $hitbox
 @onready var physics_collision_shape: CollisionShape2D = $CollisionShape2D
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sword_shape: CollisionShape2D = $skeleton_sword_hitbox/sword_shape
 @onready var sparks: CPUParticles2D = $sparks/CPUParticles2D
+
 
 func _ready() -> void:
 	state_dict = make_state_dict()
@@ -48,5 +47,3 @@ func _physics_process(delta: float) -> void:
 func change_state(new_state: String):
 	state = state_dict[new_state].new(self)
 	
-#func double_attack_animation() -> void:
-#	animated_sprite.play(c.DOUBLE_ATTACK_LEFT)
