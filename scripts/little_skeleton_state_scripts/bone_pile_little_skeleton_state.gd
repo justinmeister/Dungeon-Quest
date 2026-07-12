@@ -1,11 +1,11 @@
-extends Skeleton_State
+extends Little_Skeleton_State
 
 var fade_away_tween: Tween
 
 func enter_state() -> void:
 	name = c.BONE_PILE
 	skeleton.animated_sprite.play(c.BONE_PILE)
-	skeleton.sword_shape.disabled = true
+	#skeleton.sword_shape.disabled = true
 	fade_bones()
 
 func update(_delta: float) -> void:
@@ -17,5 +17,4 @@ func fade_bones() -> void:
 	fade_away_tween.tween_callback(func delete_skeleton(): skeleton.queue_free() )
 	
 
-	
 	

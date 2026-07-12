@@ -8,4 +8,4 @@ func enter_state() -> void:
 
 func update(_delta: float) -> void:
 	if !skeleton.animation_player.is_playing():
-		skeleton.queue_free()
+		skeleton.change_state(c.BONE_PILE)

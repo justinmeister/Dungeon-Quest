@@ -13,3 +13,8 @@ res://scripts/player state scripts/base_state_class_player.gd
 res://scripts/player state scripts/jump_attack_player_state.gd
 res://scripts/player state scripts/ground_attack_player_state.gd
 res://scripts/player state scripts/fall_player_state.gd
+res://scripts/skeleton state scripts/bone_pile_skeleton_state.gd
+res://scenes/little_skeleton.tscn
+res://scripts/little_skeleton.gd
+res://scripts/little_skeleton_state_scripts/bone_pile_little_skeleton_state.gd
+res://scripts/little_skeleton_state_scripts/die_little_skeleton_state.gd

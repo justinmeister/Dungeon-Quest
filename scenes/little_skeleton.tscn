@@ -5,6 +5,10 @@
 [ext_resource type="AudioStream" uid="uid://dftudty5er5yl" path="res://assets/SFX/skeleton_fatal_hit.mp3" id="4_5ewqo"]
 [ext_resource type="Texture2D" uid="uid://bainmy0idd2o4" path="res://assets/little skeleton Idle.png" id="5_3hkpa"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2ett"]
+atlas = ExtResource("3_sw51t")
+region = Rect2(462, 0, 33, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_t12nt"]
 atlas = ExtResource("3_sw51t")
 region = Rect2(0, 0, 33, 32)
@@ -111,6 +115,14 @@ region = Rect2(240, 0, 24, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_t12nt"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2ett")
+}],
+"loop": true,
+"name": &"bone_pile",
+"speed": 10.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_t12nt")

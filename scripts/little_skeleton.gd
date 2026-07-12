@@ -21,7 +21,8 @@ func _ready() -> void:
 
 func make_state_dict() -> Dictionary:
 	var new_state_dict = {c.IDLE: preload("res://scripts/little_skeleton_state_scripts/idle_little_skeleton_state.gd"),
-						  c.DIE: preload("res://scripts/little_skeleton_state_scripts/die_little_skeleton_state.gd")
+						  c.DIE: preload("res://scripts/little_skeleton_state_scripts/die_little_skeleton_state.gd"),
+						  c.BONE_PILE: preload("res://scripts/little_skeleton_state_scripts/bone_pile_little_skeleton_state.gd")
 				  		 }
 	return new_state_dict
 
