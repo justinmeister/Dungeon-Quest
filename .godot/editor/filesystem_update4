@@ -1,2 +1,5 @@
 res://scenes/warrior.tscn
 res://scenes/skeleton.tscn
+res://scripts/constants.gd
+res://scripts/player state scripts/jump_player_state.gd
+res://scripts/player state scripts/make_big_player_state.gd

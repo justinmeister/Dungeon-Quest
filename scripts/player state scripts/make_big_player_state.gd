@@ -5,7 +5,7 @@ var make_big_tween: Tween
 func enter_state():
 	name = c.MAKE_BIG
 	player.big = true
-	player.animated_sprite.play(c.IDLE)
+	player.play_animation(c.IDLE_RIGHT, c.IDLE_LEFT)
 	
 func update(_delta):
 	if !make_big_tween:
