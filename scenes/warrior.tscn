@@ -495,7 +495,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jej6c"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jq62g"]
 radius = 7.0
 height = 26.0
 
@@ -937,7 +937,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [11.0]
+"values": [9.0]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -961,7 +961,7 @@ tracks/6/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-1, 2)]
+"values": [Vector2(0, 2)]
 }
 tracks/7/type = "value"
 tracks/7/imported = false
@@ -1039,7 +1039,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 2)]
+"values": [Vector2(0, 2)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1051,7 +1051,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [11.0]
+"values": [9.0]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -1130,6 +1130,18 @@ tracks/3/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("physics_collision_shape:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-2, 2), Vector2(-2, 0), Vector2(-2, -1)]
+}
 
 [sub_resource type="Animation" id="Animation_bwxyh"]
 resource_name = "jump_right"
@@ -1182,6 +1194,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("physics_collision_shape:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 2)]
 }
 
 [sub_resource type="Animation" id="Animation_m0bhd"]
@@ -1485,7 +1509,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(-1, 2)]
+"values": [Vector2(0, 2)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1509,7 +1533,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [11.0]
+"values": [9.0]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -1587,7 +1611,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1, 2)]
+"values": [Vector2(0, 2)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -1611,7 +1635,7 @@ tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [11.0]
+"values": [9.0]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -1695,6 +1719,7 @@ z_index = 5
 collision_layer = 2
 collision_mask = 5
 floor_constant_speed = true
+floor_snap_length = 2.0
 script = ExtResource("1_bwxyh")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2137190222]
@@ -1703,7 +1728,7 @@ animation = &"idle1"
 
 [node name="physics_collision_shape" type="CollisionShape2D" parent="." unique_id=1456781306]
 position = Vector2(2, 3)
-shape = SubResource("CapsuleShape2D_jej6c")
+shape = SubResource("CapsuleShape2D_jq62g")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1004354285]
 zoom = Vector2(3, 3)

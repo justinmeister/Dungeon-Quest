@@ -358,30 +358,24 @@ volume_db = -19.925
 [node name="Enemies" type="Node" parent="." unique_id=199991359]
 
 [node name="skeleton3" parent="Enemies" unique_id=970648873 instance=ExtResource("7_oc4kc")]
-position = Vector2(366, 143)
+position = Vector2(367, 143)
 rotation = -3.1415925
 scale = Vector2(1, -1)
-collision_layer = 4
-collision_mask = 3
 
 [node name="skeleton4" parent="Enemies" unique_id=1967709050 instance=ExtResource("7_oc4kc")]
 position = Vector2(536, 143)
 rotation = -3.1415925
 scale = Vector2(1, -1)
-collision_layer = 4
-collision_mask = 3
 
 [node name="skeleton2" parent="Enemies" unique_id=1826670100 instance=ExtResource("7_oc4kc")]
 position = Vector2(848, 142)
 rotation = 3.1415925
 scale = Vector2(1, -1)
-collision_layer = 4
-collision_mask = 3
 
-[node name="Warrior" parent="." unique_id=77253371 instance=ExtResource("10_qxy0u")]
-position = Vector2(81, 160)
-
-[node name="little_skeleton" parent="." unique_id=1315541858 instance=ExtResource("10_excbq")]
+[node name="little_skeleton" parent="Enemies" unique_id=1315541858 instance=ExtResource("10_excbq")]
 position = Vector2(166, 161)
+
+[node name="Warrior" parent="Enemies" unique_id=77253371 instance=ExtResource("10_qxy0u")]
+position = Vector2(81, 160)
 
 [connection signal="body_entered" from="change_level" to="." method="_on_change_level_body_entered"]

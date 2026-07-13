@@ -11,7 +11,6 @@ func enter_state() -> void:
 	
 func update(delta: float) -> void:
 	player.velocity += player.get_gravity() * delta
-	print(player.velocity.y)
 	
 	if player.animated_sprite.frame == 4:
 		player.velocity.x = 0

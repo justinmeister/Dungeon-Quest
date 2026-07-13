@@ -2,7 +2,6 @@
 
 extends Object
 
-
 var skeleton: CharacterBody2D
 var name: String
 

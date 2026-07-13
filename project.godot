@@ -67,6 +67,7 @@ big={
 2d_physics/layer_2="player"
 2d_physics/layer_3="enemies"
 2d_physics/layer_4="sword_hit_box"
+2d_physics/layer_5="enemy_static_body"
 
 [physics]
 

@@ -6,6 +6,7 @@ func enter_state():
 	name = c.RUN
 	player.play_animation(c.RUN_RIGHT, c.RUN_LEFT)
 	player.double_jump_timer.start(c.DOUBLE_JUMP_WAIT_TIME)
+	coyote_floating = false
 
 func update(_delta: float) -> void:
 	player.velocity.x = move_toward(player.velocity.x, c.MAX_SPEED * player.direction, c.RUN_ACCEL)

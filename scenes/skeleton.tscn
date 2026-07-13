@@ -1069,10 +1069,10 @@ tracks/4/path = NodePath("hitbox/CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.90000004, 1.1, 1.2, 1.3000001, 1.4, 1.7, 1.8000001, 2.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [Vector2(-3, 10.000001), Vector2(-3, 9.000001), Vector2(-3.9999998, 9.000001), Vector2(-5, 10.000001), Vector2(-5, 10), Vector2(3.0000014, 9.000001), Vector2(2.9999995, 8), Vector2(1.0000005, 8), Vector2(-0.9999995, 8), Vector2(-1.9999999, 9), Vector2(-3.9999995, 9.999999), Vector2(-5.9999995, 8.999999), Vector2(-5.9999995, 8.999999), Vector2(3.0000007, 9), Vector2(1.0000007, 9), Vector2(-2.9999998, 9), Vector2(-2.9999998, 9)]
+"values": [Vector2(-3, 10.000001)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1081,10 +1081,10 @@ tracks/5/path = NodePath("hitbox/CollisionShape2D:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.90000004, 1.1, 1.2, 1.3000001, 1.4, 1.7, 1.8000001, 2.5),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0.010124713, -0.047869653, -0.13458854, -0.12855884, -0.12252915, 0.083980486, 0.08046356, 0.07694663, -0.0036301985, -0.0036301985, -0.0036301985, -0.0036301985, -0.0036301985, -0.0036301985, -0.0036301985, -0.0036301985, -0.0036301985]
+"values": [0.0]
 }
 tracks/6/type = "value"
 tracks/6/imported = false
@@ -1161,7 +1161,8 @@ _data = {
 }
 
 [node name="skeleton" type="CharacterBody2D" unique_id=418009140]
-scale = Vector2(-1, 1)
+collision_layer = 4
+collision_mask = 0
 script = ExtResource("1_w4hcs")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1979598173]
@@ -1170,16 +1171,17 @@ position = Vector2(0, 2.383)
 sprite_frames = SubResource("SpriteFrames_xrus2")
 animation = &"double_attack"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1007325399]
-visible = false
+[node name="physics_shape2D" type="CollisionShape2D" parent="." unique_id=1007325399]
 position = Vector2(-4, 10)
 shape = SubResource("CapsuleShape2D_7e1v2")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=100480035]
+visible = false
 collision_layer = 4
 collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1828579313]
+visible = false
 z_index = 5
 position = Vector2(-3, 10.000001)
 rotation = 0.010124713
@@ -1191,6 +1193,7 @@ stream = ExtResource("16_f63t1")
 volume_db = -13.402
 
 [node name="skeleton_sword_hitbox" type="Area2D" parent="." unique_id=1116712806]
+visible = false
 z_index = 5
 position = Vector2(2, 10)
 collision_layer = 8

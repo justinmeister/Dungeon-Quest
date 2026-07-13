@@ -6,3 +6,10 @@ res://scripts/constants.gd
 res://scripts/player.gd
 res://scripts/player state scripts/hit_in_air_player_state.gd
 res://scripts/player state scripts/jump_attack_player_state.gd
+res://scripts/player state scripts/run_player_state.gd
+res://scenes/skeleton.tscn
+res://scenes/levels/level_1.tscn
+res://scripts/skeleton.gd
+res://scripts/skeleton state scripts/double_attack_skeleton_state.gd
+res://scenes/little_skeleton.tscn
+res://scripts/skeleton state scripts/base_state_class_skeleton.gd

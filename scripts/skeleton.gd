@@ -7,7 +7,7 @@ var health = c.SKELETON_START_HEALTH
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox: Area2D = $hitbox
-@onready var physics_collision_shape: CollisionShape2D = $CollisionShape2D
+@onready var physics_collision_shape: CollisionShape2D = $physics_shape2D
 @onready var audio_player: AudioStreamPlayer = $AudioStreamPlayer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sword_shape: CollisionShape2D = $skeleton_sword_hitbox/sword_shape
@@ -41,7 +41,7 @@ func make_state_dict() -> Dictionary:
 func _physics_process(delta: float) -> void:
 	state.update(delta)
 	move_and_slide()
-	
+
 
 
 func change_state(new_state: String):
