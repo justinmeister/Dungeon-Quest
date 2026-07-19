@@ -35,7 +35,6 @@ func coyote_time_check() -> void:
 		player.coyote_timer.start(0.1)
 
 
-
 func double_jump_timer_check() -> void:
 	if player.double_jump_timer.time_left <= 0:
 		player.double_jump_buffer = false

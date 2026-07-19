@@ -29,6 +29,7 @@ const HIT = "hit"
 const HIT_IN_AIR = "hit_in_air"
 
 const WALK = "walk"
+const ATTACK = "attack"
 const ATTACK1 = "attack1"
 const ATTACK2 = "attack2"
 const DIE = "die"
