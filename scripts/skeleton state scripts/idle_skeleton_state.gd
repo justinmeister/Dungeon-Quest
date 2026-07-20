@@ -1,12 +1,8 @@
 extends Skeleton_State
 
-const ATTACK_WEIGHT_TIME = 3
-
 func enter_state():
-	var weight_time = randf_range(1.0, 4.0)
 	name = c.IDLE
-	skeleton.animated_sprite.play(name)
-	skeleton.attack_timer.start(weight_time)
+	skeleton.animation_player.play(c.IDLE)
 
 func update(_delta: float):
 	if hit_by_player_sword():
@@ -14,6 +10,8 @@ func update(_delta: float):
 			skeleton.change_state(c.HURT)
 		else:
 			skeleton.change_state(c.DIE)
+	elif skeleton.player_detected:
+		skeleton.change_state(c.DOUBLE_ATTACK)
 	
 	
 	

@@ -10,4 +10,4 @@ func update(_delta: float):
 
 func end_animation_check() -> void:
 	if !skeleton.animation_player.is_playing():
-		skeleton.change_state(c.DOUBLE_ATTACK)
+		skeleton.change_state(c.IDLE)

@@ -2,8 +2,9 @@ extends CharacterBody2D
 
 var state
 var state_dict
-var initial_state = c.DOUBLE_ATTACK
+var initial_state = c.IDLE
 var health = c.SKELETON_START_HEALTH
+var player_detected: bool = false
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox: Area2D = $hitbox
@@ -36,14 +37,19 @@ func make_state_dict() -> Dictionary:
 	return new_state_dict
 
 
-
-
 func _physics_process(delta: float) -> void:
 	state.update(delta)
 	move_and_slide()
 
-
-
 func change_state(new_state: String):
 	state = state_dict[new_state].new(self)
-	
+
+func _on_player_detect_area_2d_area_entered(area: Area2D) -> void:
+	if area.name == "hitbox_player":
+		print("entered")
+		player_detected = true
+
+func _on_player_detect_area_2d_area_exited(area: Area2D) -> void:
+	if area.name == "hitbox_player":
+		print("exited")
+		player_detected = false

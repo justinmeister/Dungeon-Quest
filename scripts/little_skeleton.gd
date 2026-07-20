@@ -39,9 +39,7 @@ func change_state(new_state: String):
 	
 
 func _on_detect_enemy_area_2d_area_entered(_area: Area2D) -> void:
-	print("entered")
 	player_detected = true
 
 func _on_detect_enemy_area_2d_area_exited(_area: Area2D) -> void:
-	print("exited")
 	player_detected = false
