@@ -40,7 +40,7 @@ const DOUBLE_ATTACK = "double_attack"
 const DOUBLE_ATTACK_LEFT = "double_attack_left"
 
 const MAX_SPEED: float = 100.0
-const JUMP_VELOCITY: float = -300.0
+const JUMP_VELOCITY: float = -230.0
 const DOUBLE_JUMP_VELOCITY: float = -330.0
 const RUN_ACCEL: float = 20.0
 const SKELETON_DEATH_TIME: float = 1.0
